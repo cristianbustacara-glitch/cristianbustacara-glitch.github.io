@@ -774,4 +774,23 @@ footer {
   }
 }
 
+/* Full Dashboard Button */
+.dashboard-link {
+  display: inline-block;
+  margin: 18px 0;
+  padding: 12px 22px;
+  background: #168cff;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.dashboard-link:hover {
+  background: #39c6ff;
+  color: #050b12;
+}
+
+
 
