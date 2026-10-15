@@ -792,5 +792,26 @@ footer {
   color: #050b12;
 }
 
+/* Open Full Dashboard Button */
+.dashboard-link {
+  display: inline-block;
+  margin: 18px 0;
+  padding: 12px 22px;
+  background-color: #168cff;
+  color: #ffffff;
+  border: 1px solid #168cff;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.dashboard-link:hover {
+  background-color: #39c6ff;
+  border-color: #39c6ff;
+  color: #050b12;
+}
+
 
 
