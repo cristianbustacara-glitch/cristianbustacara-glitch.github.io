@@ -815,3 +815,95 @@ footer {
 
 
 
+
+/* COURSES AND CERTIFICATES */
+#certifications.certifications-section {
+  border-bottom: 1px solid var(--border);
+  scroll-margin-top: 110px;
+}
+.certifications-heading { max-width: 760px; margin-bottom: 36px; }
+#certifications .certifications-label {
+  color: var(--cyan); font-size: .75rem; font-weight: 700;
+  letter-spacing: 2.5px; margin-bottom: 12px;
+}
+#certifications h2 {
+  font-size: clamp(2rem, 4vw, 3rem); line-height: 1.2;
+  letter-spacing: -1px; margin-bottom: 16px;
+}
+.certifications-intro { line-height: 1.8; }
+.credentials-grid {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px;
+}
+.credential-card {
+  display: flex; flex-direction: column; align-items: flex-start;
+  min-width: 0; padding: 26px; border: 1px solid var(--border);
+  border-radius: 16px; background: var(--card);
+  transition: border-color .2s ease, transform .2s ease;
+}
+.credential-card:hover { border-color: rgba(57,198,255,.45); transform: translateY(-3px); }
+.credential-icon {
+  display: inline-flex; justify-content: center; align-items: center;
+  width: 48px; height: 48px; margin-bottom: 22px; border-radius: 12px;
+  border: 1px solid rgba(57,198,255,.25); background: rgba(22,140,255,.1);
+  color: var(--cyan); font-size: .85rem; font-weight: 700; letter-spacing: .5px;
+  flex-shrink: 0;
+}
+.credential-body { flex: 1; min-width: 0; }
+#certifications .credential-issuer { color: #b6c7d9; font-size: .8rem; margin-bottom: 8px; }
+#certifications .credential-card h3 {
+  font-size: 1.15rem; line-height: 1.45; margin-bottom: 16px; overflow-wrap: anywhere;
+}
+#certifications .credential-meta { color: var(--muted); font-size: .85rem; }
+.credential-meta span { padding: 0 7px; color: #64809b; }
+.credential-link {
+  display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+  min-height: 44px; margin-top: 26px; color: #9bdaff; font-size: .9rem; font-weight: 700;
+  border-bottom: 1px solid rgba(57,198,255,.35);
+}
+.credential-link:hover { color: white; border-color: var(--cyan); }
+.credential-link:focus-visible, nav a:focus-visible {
+  outline: 3px solid var(--cyan); outline-offset: 5px; border-radius: 3px;
+}
+.credential-featured {
+  grid-column: 1 / -1; flex-direction: row; align-items: center; gap: 26px; padding: 32px;
+  background: linear-gradient(115deg, #10273e, var(--card));
+  border-color: rgba(57,198,255,.3);
+}
+.credential-featured .credential-icon { margin-bottom: 0; width: 64px; height: 64px; font-size: 1.1rem; }
+#certifications .credential-featured h3 { font-size: clamp(1.25rem, 2.4vw, 1.65rem); margin-bottom: 8px; }
+.credential-featured .credential-link {
+  flex-shrink: 0; margin-top: 0; padding: 10px 18px;
+  border: 1px solid rgba(57,198,255,.35); border-radius: 8px;
+}
+.complementary-training {
+  display: flex; align-items: center; justify-content: space-between; gap: 32px;
+  padding: 26px 0 0; margin-top: 34px; border-top: 1px solid var(--border);
+}
+#certifications .complementary-label { color: var(--cyan); font-size: .68rem; letter-spacing: 1.8px; margin-bottom: 10px; }
+.complementary-training h3 { max-width: 680px; font-size: .95rem; font-weight: 500; line-height: 1.6; margin-bottom: 8px; }
+.complementary-training p { font-size: .8rem; }
+.complementary-training p span { padding: 0 7px; }
+.complementary-note { flex-shrink: 0; }
+@media (max-width: 950px) {
+  .credentials-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .credential-featured { flex-wrap: wrap; }
+  .credential-featured .credential-body { flex-basis: calc(100% - 100px); }
+  .credential-featured .credential-link { margin-left: 90px; }
+}
+@media (max-width: 700px) {
+  nav { gap: 22px; padding-top: 12px; padding-bottom: 12px; }
+  nav > div:last-child { flex-wrap: wrap; justify-content: flex-end; gap: 8px 14px; }
+  #certifications.certifications-section { padding: 70px 0; scroll-margin-top: 130px; }
+  .complementary-training { flex-direction: column; align-items: flex-start; gap: 12px; }
+}
+@media (max-width: 560px) {
+  .credentials-grid { grid-template-columns: 1fr; }
+  .credential-card { padding: 24px; }
+  .credential-featured { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .credential-featured .credential-body { flex-basis: auto; }
+  .credential-featured .credential-link { margin-left: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .credential-card { transition: none; }
+  .credential-card:hover { transform: none; }
+}
