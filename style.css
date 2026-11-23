@@ -23,6 +23,24 @@
 html {
   scroll-behavior: smooth;
 }
+/* Capturas y tableros de la sección Projects */
+#projects .project-visual {
+  width: 100%;
+  max-width: 680px;
+  margin-inline: auto;
+}
+
+#projects .project-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#projects .project-visual iframe {
+  display: block;
+  width: 100%;
+  height: clamp(260px, 52vw, 400px);
+}
 
 body {
   background:
